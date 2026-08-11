@@ -1,9 +1,12 @@
-import openai
+
 import os
+import streamlit as st
+from openai import OpenAI
 from dotenv import load_dotenv
 
 load_dotenv()
-openai.api_key = os.getenv("OPENAIAPIKEY")
+
+OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
 def generate_faq(product_name, user_profile="general"):
     """Generate personalized FAQ based on product and user profile."""
