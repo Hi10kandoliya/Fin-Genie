@@ -5,7 +5,7 @@ from openai import OpenAI
 
 def get_openai_client():
     """Create and return an OpenAI client using Streamlit secrets."""
-    return OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+    return OpenAI(api_key=st.secrets["Fin-Genie-Key"])
 
 
 def generate_faq(product_name, user_profile="general"):
