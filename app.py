@@ -5,7 +5,7 @@ from utils.ai_helper import generate_faq, personalize_content, fallback_faq
 st.set_page_config(page_title="FinGenie - Financial FAQ Assistant", layout="centered")
 
 # --- Sidebar ---
-st.sidebar.image("logo.png", width=100) if False else st.sidebar.title("🧠 FinGenie")
+st.sidebar.title("🧠 FinGenie")
 st.sidebar.markdown("**Your AI Financial Guide**")
 st.sidebar.markdown("---")
 st.sidebar.info("This demo uses generative AI to create personalized FAQs and explanations for financial products.")
@@ -59,6 +59,7 @@ if st.button("Generate FAQs & Explanation", type="primary"):
                 st.info(explanation)
             except:
                 st.info(f"As a {profile}, {product} can help you achieve your financial goals. Contact us for personalized advice.")
+                
         
         st.success("✅ Content generated successfully!")
 
