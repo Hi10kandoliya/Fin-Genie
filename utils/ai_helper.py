@@ -9,7 +9,7 @@ def get_openai_client():
 
 
 def generate_faq(product_name, user_profile="general"):
-    """Generate personalized FAQ based on product and user profile."""
+    """ Generate personalized FAQ based on product and user profile."""
 
     profile_context = {
         "student": "You are a college student looking for low-cost options.",
